@@ -1,18 +1,155 @@
-.converter {
-  margin: 20px;
+/* PdfConverter.css */
+
+/* Container */
+.pdf-converter-container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-input {
-  margin: 10px;
+/* File Input */
+.pdf-converter-container input[type="file"] {
+  display: none;
 }
 
-button {
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #0074d9;
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1E40AF;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.2s;
+}
+
+.file-input-label:hover {
+  background-color: #2563EB;
+}
+
+/* Selected files list */
+.selected-files {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.selected-files li {
+  padding: 8px 10px;
+  background-color: #F3F4F6;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Remove file button */
+.remove-file-btn {
+  background: #EF4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.remove-file-btn:hover {
+  background: #DC2626;
+}
+
+/* Upload & Convert button */
+.upload-btn {
+  padding: 12px 28px;
+  background-color: #10B981;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 15px;
   cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #059669;
+}
+
+.upload-btn:disabled {
+  background-color: #6EE7B7;
+  cursor: not-allowed;
+}
+
+/* Progress bars */
+.progress-container {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.progress-bar-wrapper {
+  background-color: #E5E7EB;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #3B82F6;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+/* Status text */
+.progress-status {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* Success message / download link */
+.download-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #F59E0B;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.download-link:hover {
+  background-color: #D97706;
+}
+
+/* Error message */
+.error-message {
+  color: #EF4444;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pdf-converter-container {
+    padding: 18px;
+  }
+
+  .upload-btn,
+  .file-input-label,
+  .download-link {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
 }
